@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <center> <h1>Signup</h1>
+    <form method="POST" action="/signup">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Signup">
+    </form>
+
+    <p>Already have an account? <a href="/login">Log in</a></p>
+	<img src="static/train3.jpg" height="410" width="500" /><br><br></center>
+</body>
+</html>

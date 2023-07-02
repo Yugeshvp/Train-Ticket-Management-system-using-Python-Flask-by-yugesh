@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Tickets</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body><center>
+    <h1>Ticket Details</h1>
+    <table>
+        <tr>
+		<th>Id</th><br>
+            <th>Name</th><br>
+			<th>Age</th><br>
+			<th>Aadhar_Number</th>
+            <th>Train Number</th>
+            <th>Source</th><br>
+            <th>Destination</th><br>
+			<th>Compartment</th>
+			<th>Food Preference</th>
+			
+        </tr>
+        {% for ticket in tickets %}
+        <tr>
+		<td>{{ ticket[0] }}</td>
+            <td>{{ ticket[1] }}</td>
+            <td>{{ ticket[2] }}</td>
+            <td>{{ ticket[3] }}</td>
+            <td>{{ ticket[4] }}</td>
+			<td>{{ ticket[5] }}</td>
+			<td>{{ ticket[6] }}</td>
+			<td>{{ ticket[7] }}</td>
+			<td>{{ ticket[8] }}</td>
+			Download Tickets Report here ->
+			<a href="/download_ticket/{{ ticket[0] }}" class="download-icon" title="Download Ticket"  ></a>
+			
+        </tr>
+        {% endfor %}
+    </table></center>
+	<form></form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Book a Ticket</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <center><h1>Book a Ticket</h1>
+    <form method="POST" action="/ticket">
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+		<label>Age:</label>
+        <input type="text" name="age" required><br><br>
+		<label>Aadhar Number:</label>
+        <input type="text" name="aadhar_number" required><br><br>
+        <label>Train Number:</label>
+        <input type="text" name="train_number" required><br><br>
+        <label>Source:</label>
+        <input type="text" name="source" required><br><br>
+        <label>Destination:</label>
+        <input type="text" name="destination" required><br><br>
+        <label>Compartment:</label>
+        <select name="compartment">
+            <option value="1">1st Class</option>
+            <option value="2">2nd Class</option>
+            <option value="3">3rd Class</option>
+        </select>
+        {% if compartment_availability %}
+            <span class="availability">{{ compartment_availability }}</span>
+        {% endif %}
+        <br><br>
+        <label>Food Preference:</label><br>
+        <input type="radio" name="food" value="Vegetarian"> Vegetarian<br>
+        <input type="radio" name="food" value="Non-Vegetarian"> Non-Vegetarian<br><br>
+        <input type="submit" value="Book Ticket">
+    </form></center>
+</body>
+</html>

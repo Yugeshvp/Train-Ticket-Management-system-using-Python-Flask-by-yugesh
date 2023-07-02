@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<center>  
+  <h1>Login</h1>
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <p>Don't have an account? <a href="/signup">Signup</a></p>
+	<img src="static/train2.jpg" height="410" width="500" /><br><br>
+	</center>
+</body>
+</html>
