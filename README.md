@@ -9,6 +9,8 @@ ticket
 tickets
 download
 > Install mysql-connector-python to connect your flask app to your local system MySql
+
 > Create table users for new user signup and login and tickets table for book ticket details in flask app.py
+
 > After booking ticket you can view your ticket details and also can download the Ticket report as excel csv file
 
